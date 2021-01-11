@@ -10,9 +10,13 @@ export default class ProtfolioContainer extends Component {
             pageTitle: "Welcome to my profolio",
             data: [
                 {title:"bob"},
-                {title: "jill"},
-             {title: "jack"}] 
-        }
+                {title:"jill"},
+                {title:"jack"},
+                {title:"Marice"}
+            ] 
+        };
+        
+        this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
     }
     
 PortfolioItems() {
@@ -21,12 +25,22 @@ PortfolioItems() {
     })
 }
 
+    handlePageTitleUpdate() {
+        this.setState({
+            pageTitle: "Something Else"
+        });
+    }
+
     render() {
         return (
             <div>
                 <h2>{this.state.pageTitle}</h2>
 
                 {this.PortfolioItems()}
+
+                <hr/>
+
+                <button onClick={this.handlePageTitleUpdate}>Change Title</button>
             </div>
         )
     }
