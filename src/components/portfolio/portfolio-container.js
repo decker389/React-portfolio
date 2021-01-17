@@ -53,8 +53,6 @@ export default class PortfolioContainer extends Component {
       return <div>Loading...</div>;
     }
 
-    this.getPortfolioItems();
-
     return (
       <div>
         <h2>{this.state.pageTitle}</h2>
