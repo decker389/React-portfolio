@@ -99,21 +99,28 @@ export default class App extends Component {
               <Route exact path="/" component={Home} />
 
               <Route 
-              path="/auth"
-              render={props => (
+                path="/auth"
+                render={props => (
                   <Auth 
                   {...props}
                   handleSuccessfulLogin={this.handleSuccessfulLogin}
                   handleUnsuccessfulLogin={this.handleUnSuccessfulLogin}
                   />
-              )}
+                )}
               />
 
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route path="/blog" component={Blog} />
+
+              <Route path="/blog"
+              render={props => (
+                  <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
+                )} 
+              />
+
               <Route path="/b/:slug" component={BlogDetail} />
-              {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null }
+              {this.state.loggedInStatus === "LOGGED_IN" ? (this.authorizedPages()
+              ) : null }
               <Route exact path="/portfolio/:slug" component={PortfolioDetail} />
               <Route component={NoMatch} />
             </Switch>

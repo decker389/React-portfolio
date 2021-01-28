@@ -56,7 +56,7 @@ class Blog extends Component {
 
     getBlogItems() {
         this.setState({
-            currentPage: this.state.currentPage+1
+            currentPage: this.state.currentPage + 1
         });
 
         axios.get(`https://chrisdecker.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, { withCredentials: true })
@@ -92,11 +92,12 @@ class Blog extends Component {
              handleModalClose={this.handleModalClose}
              modalIsOpen={this.state.blogModalIsOpen} />
 
+            {this.props.loggedInStatus === "LOGGED_IN" ? (
              <div className="new-blog-link">
                  <a onClick={this.handleNewBlogClick}>
                      <FontAwesomeIcon icon="plus-circle" />
                  </a>
-             </div>
+             </div> ): null }
 
              <div className="content-container">{blogRecords}</div>
 
