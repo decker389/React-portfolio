@@ -7,4 +7,10 @@
     input {
         margin-bottom: 0px;
     }
+
+    .image-uploaders {
+        @include base-grid();
+        justify-content: center;
+        grid-template-columns: 200px;
+    }
 }
