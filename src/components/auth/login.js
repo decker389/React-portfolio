@@ -54,7 +54,7 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div>
+            <div className="login-fields">
                 <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
                 <div>{this.state.errorText}</div>
 

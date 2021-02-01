@@ -12,5 +12,18 @@
         justify-content: center;
         align-items: center;
         background-color: $offwhite;
-    }
+
+        .login-fields {
+            text-align: center;
+
+            button {
+                background-color: $teal;
+            }
+
+            button:hover {
+                background-color: $dark-teal;
+                color: white;
+            }
+         }
+     }
 }
