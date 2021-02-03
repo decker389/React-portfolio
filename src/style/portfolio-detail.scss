@@ -1,7 +1,24 @@
 .portfolio-detail-wrapper {
     @include base-grid;
+    width: 100vw;
     background-color: $offwhite;
-    margin-left: 10px;
+
+    .portfolio-banner-img  {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+
+            
+    
+     img {
+        width: 200px;
+        height: auto;
+    }
+
+    }
+    
 
     .portfolio-detail-items {
         @include base-grid;
@@ -9,6 +26,20 @@
         justify-items: center;
         align-items: center;
 
+        a {
+            padding: 15px;
+            background-color: $teal;
+            border-radius: 3px;
+            text-decoration: none;
+            color: white;
+            transition: 0.5s ease-in-out;
+            font-size: 1.2em;
+
+
+            &:hover{
+                background-color: $dark-teal;
+            }
+        }
     }
 }
         .portfolio-detail-items img {
