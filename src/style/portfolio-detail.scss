@@ -1,0 +1,27 @@
+.portfolio-detail-wrapper {
+    @include base-grid;
+    background-color: $offwhite;
+    margin-left: 10px;
+
+    .portfolio-detail-items {
+        @include base-grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+
+    }
+}
+        .portfolio-detail-items img {
+            width: 60%;
+            height: auto;
+        }
+    
+
+    .inverted_logo {
+        display: grid;
+        justify-items: center;
+        filter: invert(100%);
+    }
+    
+
+
